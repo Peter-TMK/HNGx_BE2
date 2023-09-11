@@ -1,0 +1,26 @@
+{
+  "name": "hngx_be2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Peter-TMK/HNGx_BE2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peter-TMK/HNGx_BE2/issues"
+  },
+  "homepage": "https://github.com/Peter-TMK/HNGx_BE2#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.10.1",
+    "mongoose": "^7.5.1"
+  }
+}
