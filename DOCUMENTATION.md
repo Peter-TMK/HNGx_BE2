@@ -8,6 +8,16 @@ A documentation on how to do the following:
 
 - Instructions for setting up and deploying the API locally or on a server.
 
+## Data Model
+
+---
+
+### Person
+
+| field | data_type | constraints |
+| ----- | --------- | ----------- |
+| name  | string    | required    |
+
 ### Endpoints
 
 A list of API endpoints, their descriptions, and sample requests and responses.

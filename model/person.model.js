@@ -9,4 +9,4 @@ const PersonSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Persons", PersonSchema);
+module.exports = mongoose.model("Person", PersonSchema);
