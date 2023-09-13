@@ -1,17 +1,20 @@
 const express = require("express");
 const app = express();
 const PersonModel = require("./model/person.model");
+const {
+  personValidationMiddleWare,
+  personUpdateValidationMiddleware,
+} = require("./validation/person.validate");
 
 require("dotenv").config();
 const port = process.env.PORT;
 
 const mongoDbConnect = require("./database/db");
-const personModel = require("./model/person.model");
 mongoDbConnect();
 
 app.use(express.json());
 // - CREATE: Adding a new person. =>/api
-app.post("/api", async (req, res) => {
+app.post("/api", personValidationMiddleWare, async (req, res) => {
   const person = new PersonModel(req.body);
   try {
     await person.save();
@@ -24,18 +27,18 @@ app.post("/api", async (req, res) => {
 });
 
 // - READ: Fetching details of all persons. => /api
-app.get("/api", async (req, res) => {
-  const allPeople = await PersonModel.find();
-  try {
-    res
-      .status(200)
-      .json({ message: "Persons' details retrieved successful!", allPeople });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ message: "No person detail found!", error: error.message });
-  }
-});
+// app.get("/api", async (req, res) => {
+//   const allPeople = await PersonModel.find();
+//   try {
+//     res
+//       .status(200)
+//       .json({ message: "Persons' details retrieved successful!", allPeople });
+//   } catch (error) {
+//     res
+//       .status(500)
+//       .json({ message: "No person detail found!", error: error.message });
+//   }
+// });
 
 // - READ: Fetching details of a person. => /api/user_id
 app.get("/api/:user_id", async (req, res) => {
@@ -52,7 +55,7 @@ app.get("/api/:user_id", async (req, res) => {
 });
 
 // - UPDATE: Modifying details of an existing person => /api/user_id
-app.put("/api/:user_id", async (req, res) => {
+app.put("/api/:user_id", personUpdateValidationMiddleware, async (req, res) => {
   try {
     const updatePerson = await PersonModel.findByIdAndUpdate(
       req.params.user_id,
