@@ -78,7 +78,7 @@ $ git pull upstream main
 $ git push origin feature/feature-name
 ```
 
-6. Create a pull request to the `dev` branch.
+6. Create a pull request to the `main` branch.
 7. Wait for your pull request to be reviewed and merged.
 
 ### The source code for the API
