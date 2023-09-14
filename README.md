@@ -87,7 +87,7 @@ https://github.com/Peter-TMK/HNGx_BE2
 
 ### Link to hosted API
 
-https://tundehngxbe2.onrender.com
+https://tundehngxbe2.onrender.com/api
 
 ### UML diagrams (or links to view them)
 
