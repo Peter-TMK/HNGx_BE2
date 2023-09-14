@@ -85,6 +85,10 @@ $ git push origin feature/feature-name
 
 https://github.com/Peter-TMK/HNGx_BE2
 
+### Link to hosted API
+
+https://tundehngxbe2.onrender.com
+
 ### UML diagrams (or links to view them)
 
 link here
