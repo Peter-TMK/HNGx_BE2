@@ -55,7 +55,7 @@ A list of API endpoints, their descriptions, and sample requests and responses.
 
 ### Read "person" Endpoint
 
-- Route: http://localhost:port-number/api/:user_id
+- Route: http://localhost:port-number/api/user_id
 - Method: GET
 - Body: None
 
@@ -78,7 +78,7 @@ A list of API endpoints, their descriptions, and sample requests and responses.
 
 ### Update "person" Endpoint
 
-- Route: http://localhost:port-number/api/:user_id
+- Route: http://localhost:port-number/api/user_id
 - Method: PUT
 - Body:
 
@@ -107,7 +107,7 @@ A list of API endpoints, their descriptions, and sample requests and responses.
 
 ### Delete "person" Endpoint
 
-- Route: http://localhost:port-number/api/:user_id
+- Route: http://localhost:port-number/api/user_id
 - Method: DELETE
 - Body: None
 

@@ -14,4 +14,4 @@ function mongoDbConnect() {
   });
 }
 
-module.exports = mongoDbConnect;
+module.exports = { mongoDbConnect };

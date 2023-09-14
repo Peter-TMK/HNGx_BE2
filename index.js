@@ -9,7 +9,7 @@ const {
 require("dotenv").config();
 const port = process.env.PORT;
 
-const mongoDbConnect = require("./database/db");
+const { mongoDbConnect } = require("./database/db");
 mongoDbConnect();
 
 app.use(express.json());
